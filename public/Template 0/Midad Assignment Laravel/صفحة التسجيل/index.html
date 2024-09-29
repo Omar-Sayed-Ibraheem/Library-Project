@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login 3</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login">
+      <div class="avatar">
+        <img src="ORIMMA.jpg" />
+      </div>
+      <h2>Login</h2>
+      <h3>Please signup with Your credentials</h3>
+
+      <form class="login-form" action="signup.php" method="post">
+        <div class="textbox">
+          <input required type="email" placeholder="User Email" />
+          <span class="material-symbols-outlined"> account_circle </span>
+        </div>
+
+        <div class="textbox">
+          <input required type="password" placeholder="Password" />
+          <span class="material-symbols-outlined"> lock </span>
+        </div>
+
+        <div class="textbox">
+          <input required type="password" placeholder="Confirm Password" />
+          <span class="material-symbols-outlined"> lock </span>
+        </div>
+
+        <br>
+
+        <div class="textbox">
+          <input
+            required
+            spellcheck="false"
+            type="text"
+            placeholder="Type a name"
+          />
+          <span class="material-symbols-outlined"> id_card </span>
+          <label for="textbox">Username</label>
+        </div>
+
+        <div class="textbox">
+          <input
+            required
+            spellcheck="false"
+            type="date"
+            placeholder="Type a date"
+          />
+          <span class="material-symbols-outlined"> calendar_today </span>
+          <label for="textbox">Date Of Birth</label>
+        </div>
+
+        <button type="reset" value="Reset">Reset</button>
+        <button type="submit">Sign Up</button>
+        <a href="login.php">Login Instead!</a>
+      </form>
+    </div>
+  </body>
+</html>
