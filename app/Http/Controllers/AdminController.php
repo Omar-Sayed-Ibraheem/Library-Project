@@ -36,9 +36,27 @@ class AdminController extends Controller
         return view('admin.category');
     }
 
+    public function showcategory_page()
+    {
+        $data = Category::all();
+        return view('admin.showcategory', compact('data'));
+    }
+
     public function book_page()
     {
         return view('admin.book');
+    }
+
+    public function showbook_page()
+    {
+        $data = Book::all();
+        return view('admin.showbook', compact('data'));
+    }
+
+    public function showusers_page()
+    {
+        $data = User::all();
+        return view('admin.showusers', compact('data'));
     }
 
     public function add_category(Request $request)

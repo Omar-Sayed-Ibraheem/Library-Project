@@ -27,6 +27,10 @@ Route::group(
 
 Route::get('/home', [AdminController::class, 'index']);
 Route::get('/category_page', [AdminController::class, 'category_page']);
+Route::get('/showcategory_page', [AdminController::class, 'showcategory_page']);
 Route::get('/book_page', [AdminController::class, 'book_page']);
+Route::get('/showbook_page', [AdminController::class, 'showbook_page']);
+Route::get('/showusers_page', [AdminController::class, 'showusers_page']);
+
 Route::post('/add_category', [AdminController::class, 'add_category']);
 Route::post('/add_book', [AdminController::class, 'add_book']);

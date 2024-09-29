@@ -12,19 +12,11 @@
                 <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
                 <li><a href="{{url('category_page')}}"> <i class="icon-grid"></i>categories </a></li>
                 <li><a href="{{url('book_page')}}"> <i class="icon-padnote"></i>Books </a></li>
-                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Showing Data </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
+                    <li><a href="{{url('showcategory_page')}}">Show Categories</a></li>
+                    <li><a href="{{url('showbook_page')}}">Show Books</a></li>
+                    <li><a href="{{url('showusers_page')}}">Show Users</a></li>
                   </ul>
                 </li>
-                <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
-        </ul><span class="heading">Extras</span>
-        <ul class="list-unstyled">
-          <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-writing-whiteboard"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
-        </ul>
       </nav>
