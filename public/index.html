@@ -18,42 +18,13 @@
       </div>
       <div class="clr"></div>
       <div class="menu_nav">
-      @if (Route::has('login'))
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="support.html">Support</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-                                @auth
-                                    <li><a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Dashboard
-                                    </a></li>
-                                @else
-                                    <li><a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                    >
-                                        Log in
-                                    </a></li>
-
-                                    @if (Route::has('register'))
-                                    <li><a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
-                                        >
-                                            Register
-                                        </a></li>
-
-                                    @endif
-                                @endauth
-                        @endif
         </ul>
-                        
-                            
       </div>
       <div class="searchform">
         <form id="formsearch" name="formsearch" method="post" action="#">
