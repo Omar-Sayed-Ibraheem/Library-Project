@@ -2,6 +2,12 @@
 <div class="main-banner">
     <div class="container">
       <div class="row">
+      @if(session()->has('message'))
+    <div class="alert alert-success">
+        <button type="Button" class="close" data-bs-dismiss="alert" aria-hidden="true">X</button>
+        {{ session()->get('message') }}
+    </div>
+@endif
         <div class="col-lg-6 align-self-center">
           <div class="header-text">
             <h6>Book is Knowledge</h6>
@@ -9,10 +15,10 @@
             <p>Library is a really cool and professional design for your websites. This HTML CSS template is based on Bootstrap v5 and it is designed for related web portals. Liberty can be freely downloaded from github</p>
             <div class="buttons">
               <div class="border-button">
-                <a href="explore.html">Explore Top Books</a>
+                <a href="{{url('explore')}}">Explore Top Books</a>
               </div>
               <div class="main-button">
-                <a href="" target="_blank">Watch Our Videos</a>
+                <a href="\" target="_blank">Watch Our Videos</a>
               </div>
             </div>
           </div>

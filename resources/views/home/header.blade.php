@@ -25,11 +25,11 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="explore.html">Explore</a></li>
-                        <li><a href="details.html">Item Details</a></li>
-                        <li><a href="author.html">Author</a></li>
-                        <li><a href="create.html">Create Yours</a></li>
+                        <li><a href="\" class="active">Home</a></li>
+                        <li><a href="{{url('explore')}}">Explore</a></li>
+                        <li><a href="\">Item Details</a></li>
+                        <li><a href="\">Author</a></li>
+                        <li><a href="\">Create Yours</a></li>
                         @if (Route::has('login'))
                             
                                 @auth

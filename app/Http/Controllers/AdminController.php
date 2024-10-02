@@ -22,6 +22,7 @@ class AdminController extends Controller
             }
             else if ($user_type == 'user')
             {
+                $data = Book::all();
                 return view('home.index');
             }
         }
@@ -79,18 +80,17 @@ class AdminController extends Controller
         $data->Book_description = $request-> Bookdescription;
         $data->Book_Quantity = $request-> BookQuantity;
         $Book_Img = $request->BookImg;
-        if($Book_Img)
-        {
-            $Book_Img_name = time().'.'.$Book_Img->getClientOriginalExtension();
-            $request->Book_Img->move('BookImages',$Book_Img_name);
+        if ($request->hasFile('BookImg')) {
+            $Book_Img = $request->file('BookImg');
+            $Book_Img_name = time() . '.' . $Book_Img->getClientOriginalExtension();
+            $Book_Img->move('BookImages', $Book_Img_name);
             $data->Book_Img = $Book_Img_name;
         }
-        $Book_Author_Img = $request-> BookAuthorImg;
-        if($Book_Author_Img)
-        {
-            $Book_Author_Img_name = time().'.'.$Book_Author_Img->getClientOriginalExtension();
-            $request->Book_Author_Img->move('AuthorImages',$Book_Author_Img_name);
-            $data->Book_Author_Img = $request-> $Book_Author_Img_name;
+        if ($request->hasFile('BookAuthorImg')) {
+            $Book_Author_Img = $request->file('BookAuthorImg');
+            $Book_Author_Img_name = time() . '.' . $Book_Author_Img->getClientOriginalExtension();
+            $Book_Author_Img->move('AuthorImages', $Book_Author_Img_name);
+            $data->Book_Author_Img = $Book_Author_Img_name;
         }
         $data->category_id = $request->category;
         $data->save();

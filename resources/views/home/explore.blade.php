@@ -1,20 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    @include('home.css')
+  </head>
+
+<body>
+  @include('home.header')
+  
 <div class="currently-market">
-<div class="card-header bg-primary text-white text-center">
-<h1 class="h4">Search book</h1>
-                            </div>
-                            <div class="card-body">
-                                <form action="{{url('search_book')}}" method="get">
-                                    @csrf
-                                    <div class="mb-3">
-                                        <label class="form-label">Book Title</label>
-                                        <input type="text" class="form-control" name="search" required>
-                                    </div>
-                                    <div class="d-grid">
-                                        <button type="submit" class="btn btn-primary">Search</button>
-                                    </div>
-                                </form>
-                            </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
@@ -23,6 +17,12 @@
             <h2><em>Items</em> Currently In The Market.</h2>
           </div>
         </div>
+        @if(session()->has('message'))
+    <div class="alert alert-success">
+        <button type="Button" class="close" data-bs-dismiss="alert" aria-hidden="true">X</button>
+        {{ session()->get('message') }}
+    </div>
+@endif
         <div class="col-lg-6">
           <div class="filters">
             <ul>
@@ -71,3 +71,7 @@
       </div>
     </div>
   </div>
+
+  @include('home.footer')
+  </body>
+</html>

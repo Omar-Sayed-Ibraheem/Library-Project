@@ -27,6 +27,8 @@
                                   <th scope="col">Book Title</th>
                                   <th scope="col">Book Author</th>
                                   <th scope="col">Book Print Num</th>
+                                  <th scope="col">Quantity</th>
+                                  <th scope="col">Book Image</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -37,6 +39,10 @@
                                       <td>{{ $data->Book_Title }}</td>
                                       <td>{{ $data->Book_Author }}</td> 
                                       <td>{{ $data->Book_Print_Num }}</td> 
+                                      <td>{{ $data->Book_Quantity }}</td> 
+                                      <td>
+                                        <img src="BookImages/{{ $data->Book_Img }}">
+                                      </td>
                                       <td>
                                           <button class="btn btn-sm btn-info">Edit</button>
                                           <button class="btn btn-sm btn-danger">Delete</button>

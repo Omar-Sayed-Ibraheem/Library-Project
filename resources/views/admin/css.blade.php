@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="{{asset('admin/css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('admin/img/favicon.ico')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    @if (App::getLocale() == 'ar')
+    <link href="{{ asset('css/bootstrap-rtl.min.css') }}" rel="stylesheet">
+@else
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+@endif
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
