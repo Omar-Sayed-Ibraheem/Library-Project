@@ -33,4 +33,9 @@ Route::get('/showbook_page', [AdminController::class, 'showbook_page']);
 Route::get('/showusers_page', [AdminController::class, 'showusers_page']);
 
 Route::post('/add_category', [AdminController::class, 'add_category']);
+Route::get('/catgeroy_delete/{id}', [AdminController::class, 'catgeroy_delete']);
+Route::get('/catgeroy_edit/{id}', [AdminController::class, 'catgeroy_edit']);
+Route::post('/category_update/{id}', [AdminController::class, 'category_update']);
 Route::post('/add_book', [AdminController::class, 'add_book']);
+
+

@@ -13,5 +13,11 @@ class Book extends Model
         'Book_Title',
         'Book_Author',
         'Book_Print_Num',
+        'Book_Price',
+        'Book_description',
+        'Book_Quantity',
+        'Book_Img',
+        'Book_Author_Img',
+        'category_id',
     ];
 }

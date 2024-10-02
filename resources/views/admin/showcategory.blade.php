@@ -31,14 +31,14 @@
                         </thead>
                         <tbody>
                             <?php $datanum = 0; ?>
-                            @foreach ($data as $item)
+                            @foreach ($data as $data)
                             <tr>
-                                <td>{{ ++$datanum }}</td>
-                                <td>{{ $item->Category_Title }}</td>
-                                <td>{{ $item->Description }}</td> 
+                                <td>{{ $data->id }}</td>
+                                <td>{{ $data->Category_Title }}</td>
+                                <td>{{ $data->Description }}</td> 
                                 <td>
-                                    <button class="btn btn-sm btn-info">Edit</button>
-                                    <button class="btn btn-sm btn-danger">Delete</button>
+                                    <a class="btn btn-sm btn-info" href="{{url('catgeroy_edit',$data->id)}}">Edit</a>
+                                    <a class="btn btn-sm btn-danger" href="{{url('catgeroy_delete',$data->id)}}">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
